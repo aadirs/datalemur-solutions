@@ -22,7 +22,8 @@ WITH C AS
 
 
 SELECT 
-	C1.*,C2.cur_year_spend AS prev_year_spend,
+	C1.*,
+	C2.cur_year_spend AS prev_year_spend,
 	ROUND((C1.cur_year_spend - C2.cur_year_spend)*100/C2.cur_year_spend,2) AS yoy_rate 
 FROM C AS C1
 JOIN 
